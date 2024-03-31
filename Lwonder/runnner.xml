@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Execution Suite">
+	<test name="Parallel Test 1">
+		<classes>
+			<class name="testRunner.Runner1" />
+		</classes>
+	</test>
+	<test name="Parallel Test 2">
+		<classes>
+			<class name="testRunner.Runner2" />
+		</classes>
+	</test>
+
+	<test name="Parallel Test 3">
+		<classes>
+			<class name="testRunner.Runner3" />
+		</classes>
+	</test>
+</suite>

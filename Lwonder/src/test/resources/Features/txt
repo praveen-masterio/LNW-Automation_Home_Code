@@ -1,0 +1,36 @@
+Feature: Verify Subtotal after Adding a "Monitor" Item to Cart
+@smoketest
+  Scenario: Adding a Monitor Item in Cart and verifying subtotal
+    Given User is on the Amazon homepage
+    When User searches for "Monitor"
+    And User selects the first item from the list
+    And User adds the item to the cart
+    And User opens the cart
+    Then The price in the cart should match the price on the product page
+    And The subtotal in the cart should match the total price of the item added
+    
+    Feature: Verify Subtotal after Adding a "Laptop" Item to Cart
+
+  Scenario: Adding a Laptop Item in Cart and verifying subtotal
+    Given User is on the Amazon homepage
+    When User searches for "Laptop"
+    And User selects the second item from the list
+    And User adds the item to the cart
+    And User opens the cart
+    Then The price in the cart should match the price on the product page
+    And The subtotal in the cart should match the total price of the item added
+    
+    Feature: Verify Subtotal after Adding Multiple Items to Cart
+
+  Scenario: Adding two items in Cart and verifying subtotal
+    Given User is on the Amazon homepage
+    When User searches for "Headphones"
+    And User selects the first item from the list
+    And User adds the first item to the cart
+    And User searches for "Keyboard"
+    And User selects the first item from the list
+    And User adds the second item to the cart
+    And User opens the cart
+    Then Each item's total price in the cart should match the price on the product page
+    And The subtotal in the cart should be the sum of the prices of the two items
+    
